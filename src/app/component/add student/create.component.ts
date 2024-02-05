@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { StudService } from 'src/app/service/stud.service';
+import { StudService } from 'src/app/service/student.service';
 @Component({
   selector: 'app-create',
   templateUrl: './create.component.html',
@@ -9,9 +9,9 @@ export class CreateComponent {
   constructor(private studentService: StudService) {}
 
   name!: string
-  mark1!: number
-  mark2!: number 
-  mark3!: number
+  m1!: number
+  m2!: number 
+  m3!: number
   total!: number
   grade!: string
   
@@ -19,7 +19,7 @@ export class CreateComponent {
 
   saveStudent() {
     //calc-ing marks
-    this.total = (this.mark1 + this.mark2 + this.mark3) / 3;
+    this.total = (this.m1 + this.m2 + this.m3) / 3;
     if (this.total >= 90) {
       this.grade = 'A';
     }
@@ -38,9 +38,9 @@ export class CreateComponent {
     //creating object to post
     var inputData = {
       name: this.name,
-      mark1: this.mark1,
-      mark2: this.mark2,
-      mark3: this.mark3,
+      m1: this.m1,
+      m2: this.m2,
+      m3: this.m3,
       total: this.total,
       grade: this.grade,
     };
@@ -50,9 +50,9 @@ export class CreateComponent {
         console.log(res, 'response');
         alert("Student Record Added!!");
         this.name = '';
-        this.mark1 = 0;
-        this.mark2 = 0;
-        this.mark3 = 0;
+        this.m1 = 0;
+        this.m2 = 0;
+        this.m3 = 0;
       },
       error: (err: any) => {
         this.errors = err.error.errors;

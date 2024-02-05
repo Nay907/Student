@@ -4,10 +4,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './component/home/home.component';
-import { ParNavComponent } from './component/par-nav/par-nav.component';
-import { ReadComponent } from './component/read/read.component';
-import { CreateComponent } from './component/create/create.component';
-import { EditComponent } from './component/edit/edit.component';
+import { ParNavComponent } from './component/navigation/par-nav.component';
+import { ReadComponent } from './component/read-student/read.component';
+import { CreateComponent } from './component/add student/create.component';
+import { EditComponent } from './component/edit student/edit.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
